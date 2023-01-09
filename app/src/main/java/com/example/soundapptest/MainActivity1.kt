@@ -30,23 +30,23 @@ class MainActivity1 : AppCompatActivity() {
 
 
 
-        with(viewBinding) {
-            buttonStart.setOnClickListener {
-                if (checkMicrophoneAppearance()) requestPermission() else Toast.makeText(applicationContext, R.string.no_micro, Toast.LENGTH_SHORT).show()
-
-                Toast.makeText(this@MainActivity1, "Recording is started", Toast.LENGTH_SHORT).show()
-            }
-
-            buttonStop.setOnClickListener {
-
-                Toast.makeText(this@MainActivity1, "Recording is stopped", Toast.LENGTH_SHORT).show()
-            }
-
-            buttonPlay.setOnClickListener {
-
-                Toast.makeText(this@MainActivity1, "Recording is playing", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        with(viewBinding) {
+//            buttonStart.setOnClickListener {
+//                if (checkMicrophoneAppearance()) requestPermission() else Toast.makeText(applicationContext, R.string.no_micro, Toast.LENGTH_SHORT).show()
+//
+//                Toast.makeText(this@MainActivity1, "Recording is started", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            buttonStop.setOnClickListener {
+//
+//                Toast.makeText(this@MainActivity1, "Recording is stopped", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            buttonPlay.setOnClickListener {
+//
+//                Toast.makeText(this@MainActivity1, "Recording is playing", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
 
 
@@ -74,9 +74,9 @@ class MainActivity1 : AppCompatActivity() {
                 this,
                 "RECORD_AUDIO") ->
                 {
-                    Snackbar.make(this.viewBinding.textView, "PErmission for mic required", Snackbar.LENGTH_INDEFINITE).setAction("DGSDGD") {
-                        requestPermissionLauncher.launch(android.Manifest.permission.RECORD_AUDIO)
-                    }
+//                    Snackbar.make(this.viewBinding.textView, "PErmission for mic required", Snackbar.LENGTH_INDEFINITE).setAction("DGSDGD") {
+//                        requestPermissionLauncher.launch(android.Manifest.permission.RECORD_AUDIO)
+//                    }
                 }
             else -> {
                     requestPermissionLauncher.launch(android.Manifest.permission.RECORD_AUDIO)
